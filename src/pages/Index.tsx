@@ -210,12 +210,25 @@ const Index = () => {
           Галерея
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+          {[
+            'https://cdn.poehali.dev/projects/c2aba2eb-8dee-45e5-ba51-3fea031ffa7e/files/d5a9918b-e4cf-4381-880d-28b945efe1ef.jpg',
+            'https://cdn.poehali.dev/projects/c2aba2eb-8dee-45e5-ba51-3fea031ffa7e/files/7d931ad9-63d1-4f8e-a7c2-5c053718a2cf.jpg',
+            'https://cdn.poehali.dev/projects/c2aba2eb-8dee-45e5-ba51-3fea031ffa7e/files/406dab38-fe63-4fb6-86db-6e888304d252.jpg',
+            'https://cdn.poehali.dev/projects/c2aba2eb-8dee-45e5-ba51-3fea031ffa7e/files/67df4144-da87-4b97-b0f6-5fd869b770e9.jpg',
+            'https://cdn.poehali.dev/projects/c2aba2eb-8dee-45e5-ba51-3fea031ffa7e/files/a2ee8914-7d09-4559-b93c-17512e0e9442.jpg',
+            'https://cdn.poehali.dev/projects/c2aba2eb-8dee-45e5-ba51-3fea031ffa7e/files/14d879f0-46cf-428f-9a20-e353241f8b01.jpg',
+            'https://cdn.poehali.dev/projects/c2aba2eb-8dee-45e5-ba51-3fea031ffa7e/files/7fb2e15a-ca01-4562-b91c-c0078a8f0128.jpg',
+            'https://cdn.poehali.dev/projects/c2aba2eb-8dee-45e5-ba51-3fea031ffa7e/files/9c7ea996-cf2a-4781-a9c1-06a1330349af.jpg',
+          ].map((img, i) => (
             <div
               key={i}
-              className="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-sm border border-border hover:border-primary transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/20 flex items-center justify-center group"
+              className="aspect-square rounded-xl overflow-hidden backdrop-blur-sm border border-border hover:border-primary transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/20 group"
             >
-              <Icon name="Image" className="text-primary/50 group-hover:text-primary transition-colors" size={48} />
+              <img 
+                src={img} 
+                alt={`Морская жизнь ${i + 1}`}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
           ))}
         </div>
